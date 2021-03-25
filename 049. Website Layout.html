@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CSS Website Layout</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Shared assets -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <!-- Example assets -->
+    <link rel="stylesheet" type="text/css" href="css/jcarousel.responsive.css">
+    <link rel="stylesheet" type="text/css" href="css/general.css">
+    <link rel="stylesheet" href="css/colorbox.css" />
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery.colorbox.js"></script>
+    <script type="text/javascript" src="js/jquery.jcarousel.min.js"></script>
+    <script type="text/javascript" src="js/jcarousel.responsive.js"></script>
+
+    <script>
+			$(document).ready(function(){
+				//Examples of how to assign the Colorbox event to elements
+				$(".group2").colorbox({rel:'group2', transition:"fade"});
+
+			});
+	</script>
+    
+    <style>
+        h2{
+            text-align: center;
+            color: tomato;
+        }
+        div {
+            box-sizing: border-box;
+        }
+        /* header */
+        .header {
+            background-color:aquamarine;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* navigation menu*/
+        .topnav {
+            overflow: hidden;
+            background-color: #333;;
+        }
+        .topnav a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            padding: 14px 16px;
+            text-decoration: none;
+            text-align: center;
+        }
+        .topnav a:hover {
+            background-color: tomato;
+            color: black;
+        }
+        .topnav a.active {
+            background-color: orangered;
+            color: black;
+        }
+        .column {
+            float: left;
+            width: 33.33%;
+        }
+        .row::after {
+            clear: both;
+            content: "";
+            display: table;
+        }
+        .container {
+            width: 1140px;
+            margin: auto;
+        }
+        .footer {
+            text-align: center;
+            color: white;
+            padding: 20px;
+        }
+        /* */
+        .column .size{
+            background-color: burlywood;
+        }
+        @media screen and (max-width: 600px) {
+            .column {
+                width: 100%;
+            }
+            .container {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container header">
+        <h1>Header</h1>
+        <p>Resize the browser window to see the responsive effect.</p>
+    </div>
+    <div class="container topnav"><a class="active" href="#">Home</a><a href="#">Products</a><a href="#">Contact</a></div>
+
+    <div class="container wrapper">
+        <h1>Products</h1>
+        <div class="jcarousel-wrapper">
+            <div class="jcarousel">
+                <ul>
+                    <li><img src="img/22.jpg" width="600" height="400" alt=""></li>
+                    <li><img src="img/44.jpg" width="600" height="400" alt=""></li>
+                    <li><img src="img/66.jpg" width="600" height="400" alt=""></li>
+                    <li><img src="img/00.jpg" width="600" height="400" alt=""></li>
+                    <li><img src="img/88.jpg" width="600" height="400" alt=""></li>
+                    <li><img src="img/99.jpg" width="600" height="400" alt=""></li>
+                </ul>
+            </div>
+
+            <a href="#" class="jcarousel-control-prev">&lsaquo;</a>
+            <a href="#" class="jcarousel-control-next">&rsaquo;</a>
+
+            <p class="jcarousel-pagination"></p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="column side">
+                <h2>Side</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit..</p>
+            </div>
+            <div class="column middle">
+                <h2>Main Content</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna.
+                    Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus
+                    eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit.
+                    Praesent scelerisque tortor sed accumsan convallis.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna.
+                    Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus
+                    eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit.
+                    Praesent scelerisque tortor sed accumsan convallis.</p>
+            </div>
+            <div class="column side">
+                <h2>Side</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit..</p>
+            </div>
+        </div>
+    </div>
+
+    <div style="max-width: 1140px; margin: auto;">
+        <div class="gallery">
+            <a class="group2" href="img/01.jpg">
+                <img src="img/01.jpg" alt="Northern Lights" width="600" height="400">
+            </a>
+            <div class="desc">Mouse</div>
+        </div>
+
+        <div class="gallery">
+            <a class="group2" href="img/02.jpg">
+                <img src="img/02.jpg" alt="Mountains" width="600" height="400">
+            </a>
+            <div class="desc">VGA RTX</div>
+        </div>
+        <div class="gallery">
+            <a class="group2" href="img/03.jpg">
+                <img src="img/03.jpg" alt="Cinque Terre" width="600" height="400">
+            </a>
+            <div class="desc">Gaming Headset</div>
+        </div>
+        <div class="gallery">
+            <a class="group2" href="img/04.jpg">
+                <img src="img/04.jpg" alt="Forest" width="600" height="400">
+            </a>
+            <div class="desc">RAM</div>
+        </div>
+        <div class="gallery">
+            <a class="group2" href="img/05.jpg">
+                <img src="img/05.jpg" alt="Cinque Terre" width="600" height="400">
+            </a>
+            <div class="desc">Case</div>
+        </div>
+
+        <div class="gallery">
+            <a class="group2" href="img/06.jpg">
+                <img src="img/06.jpg" alt="Forest" width="600" height="400">
+            </a>
+            <div class="desc">Gaming Chair</div>
+        </div>
+
+    </div>
+
+    <div class="container footer">
+        <h1>Footer</h1>
+    </div>
+</body>
+
+</html>
